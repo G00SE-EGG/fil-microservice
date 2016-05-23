@@ -5,7 +5,11 @@ app.set('port', process.env.PORT || 3000);
 
 /*This route is the main page, where the files are selected*/
 app.get('/', function(req, res){
-   res.send('<h1>Welcome</h1>'); 
+    var html = '<h1>Welcome to the site</h1>';
+    html += '<p>Please use upload tool below to upload a file</p>';
+    html += '<input type=file />';
+    html += '<input type=submit value=Upload />';
+   res.send(html); 
 });
 
 
